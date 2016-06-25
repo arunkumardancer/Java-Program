@@ -1,0 +1,37 @@
+package com.tcc.java.programs;
+
+import java.util.*;
+
+public class InvertedPyramidPattern {
+	public static void main(String args[]) {
+		int rows, i, space, star=0;;
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter number of rows in pattern");
+		rows = in.nextInt();
+
+	    for(i = rows;i >= 1; i--) {
+	        // Printing spaces 
+	        for(space = 0; space <= rows-i; space++) {
+	            System.out.print(" ");
+	        }
+	        // Printing stars
+	        star = 0;
+	        while(star != (2*i - 1)) {
+	        	System.out.print("*");
+	            star++;
+	        }
+	        System.out.print("\n");
+	    }
+	}
+}
+/*
+Enter number of rows in pattern
+6
+ ***********
+  *********
+   *******
+    *****
+     ***
+      *
+*/
